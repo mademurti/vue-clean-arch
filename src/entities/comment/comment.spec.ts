@@ -1,13 +1,20 @@
 import { Comment } from './comment'
+import { mockCommentsData } from './comment.mock'
 
 describe('>>> Comment', () => {
-  describe('>> validate', () => {
-    it('should fail validation if title is empty', () => {
-      const entity = new Comment({
-        title: ''
-      })
-
-      expect(entity.validate()).toBeFalsy()
+  it('should instantiate id only if it was provided', () => {
+    const entity1 = new Comment({
+      ...mockCommentsData()[0],
+      id: 1
     })
-  
+
+    expect(entity1.id).toBe(1)
+
+    const entity2 = new Comment({
+      ...mockCommentsData()[0],
+      id: undefined
+    })
+
+    expect(entity2.id).toBeUndefined()
+  })
 })

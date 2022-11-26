@@ -1,4 +1,4 @@
-import { ICommentData } from '@/entities'
+import type { IComment, ICommentData } from '@/entities'
 
 export interface IArticleData {
   readonly id?: number
@@ -13,4 +13,6 @@ export interface IArticleData {
   readonly comments: ICommentData[]
 }
 
-export interface IArticle {}
+export interface IArticle extends IArticleData {
+  readonly comments: IComment[]
+}
