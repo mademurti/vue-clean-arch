@@ -1,4 +1,15 @@
 # vue-clean-arch
+Repo for learning clean architecture with Vue js.
+
+Reference: https://medium.com/javascript-in-plain-english/building-vue-enterprise-application-part-0-overture-6d41bea14236
+
+
+
+---
+
+below readme default from vue
+
+---
 
 This template should help get you started developing with Vue 3 in Vite.
 
