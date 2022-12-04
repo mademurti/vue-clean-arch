@@ -1,5 +1,6 @@
 import type { IArticle, IArticleData } from './article.types'
-import { type IComment, Comment } from '../comment'
+import type { IComment } from '../comment/comment.types'
+import { Comment } from '../comment/comment'
 
 export class Article implements IArticle {
   readonly id?: number
